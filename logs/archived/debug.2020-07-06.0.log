@@ -1,0 +1,78 @@
+2020-07-06 10:47:01 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter -
+                Creating new Restarter for thread Thread[main,5,main]
+2020-07-06 10:47:01 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter -
+                Immediately restarting application
+2020-07-06 10:47:01 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter -
+                Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4a8b769b
+2020-07-06 10:47:01 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter -
+                Starting application guru.springframework.recipedemo.RecipeDemoApplication with URLs [file:/home/nineleaps/Desktop/recipe-demo/target/classes/]
+2020-07-06 10:47:01 [restartedMain] DEBUG o.s.b.c.l.ClasspathLoggingApplicationListener -
+                Application failed to start with classpath: [file:/home/nineleaps/Desktop/recipe-demo/target/classes/]
+2020-07-06 10:47:01 [restartedMain] ERROR o.s.boot.SpringApplication -
+                Application run failed
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@40:16 - no applicable action for [level], current ElementPath  is [[configuration][appender][level]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at guru.springframework.recipedemo.RecipeDemoApplication.main(RecipeDemoApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2020-07-06 10:48:06 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter -
+                Creating new Restarter for thread Thread[main,5,main]
+2020-07-06 10:48:06 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter -
+                Immediately restarting application
+2020-07-06 10:48:06 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter -
+                Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4a8b769b
+2020-07-06 10:48:06 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter -
+                Starting application guru.springframework.recipedemo.RecipeDemoApplication with URLs [file:/home/nineleaps/Desktop/recipe-demo/target/classes/]
+2020-07-06 10:48:06 [restartedMain] DEBUG o.s.b.c.l.ClasspathLoggingApplicationListener -
+                Application failed to start with classpath: [file:/home/nineleaps/Desktop/recipe-demo/target/classes/]
+2020-07-06 10:48:06 [restartedMain] ERROR o.s.boot.SpringApplication -
+                Application run failed
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@41:101 - no applicable action for [LevelRangeFilter], current ElementPath  is [[configuration][appender][encoder][LevelRangeFilter]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at guru.springframework.recipedemo.RecipeDemoApplication.main(RecipeDemoApplication.java:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
