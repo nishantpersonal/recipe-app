@@ -1,13 +1,16 @@
 package guru.springframework.recipedemo.domain;
 
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.util.HashSet;
 import java.util.Set;
 
-@Getter
-@Setter
+/**
+ * Created by jt on 6/13/17.
+ */
+@Data
+@EqualsAndHashCode(exclude = {"recipes"})
 @Entity
 public class Category {
 
@@ -17,6 +20,6 @@ public class Category {
     private String description;
 
     @ManyToMany(mappedBy = "categories")
-    private Set<Recipe> recipes = new HashSet<>();
+    private Set<Recipe> recipes;
 
 }
