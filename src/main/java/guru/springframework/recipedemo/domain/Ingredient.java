@@ -1,5 +1,7 @@
 package guru.springframework.recipedemo.domain;
 
+import guru.springframework.recipedemo.domain.Recipe;
+import guru.springframework.recipedemo.domain.UnitOfMeasure;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

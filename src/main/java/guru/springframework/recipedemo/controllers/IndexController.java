@@ -1,10 +1,14 @@
 package guru.springframework.recipedemo.controllers;
 
+import guru.springframework.recipedemo.domain.Recipe;
 import guru.springframework.recipedemo.services.RecipeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.Set;
 
 /**
  * Created by jt on 6/1/17.
@@ -24,7 +28,6 @@ public class IndexController {
         log.debug("Getting Index page");
 
         model.addAttribute("recipes", recipeService.getRecipes());
-
         return "index";
     }
 }
