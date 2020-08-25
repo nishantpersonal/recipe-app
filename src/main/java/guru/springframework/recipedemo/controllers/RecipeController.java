@@ -1,10 +1,14 @@
 package guru.springframework.recipedemo.controllers;
 
 import guru.springframework.recipedemo.commands.RecipeCommand;
+import guru.springframework.recipedemo.domain.Difficulty;
+import guru.springframework.recipedemo.domain.Recipe;
 import guru.springframework.recipedemo.services.RecipeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Set;
 
 /**
  * Created by jt on 6/19/17.
@@ -48,4 +52,5 @@ public class RecipeController {
         recipeService.deleteRecipeById(id);
         return "redirect:/";
     }
+
 }
