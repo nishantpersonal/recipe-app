@@ -3,11 +3,16 @@ package guru.springframework.recipedemo.controllers;
 import guru.springframework.recipedemo.commands.RecipeCommand;
 import guru.springframework.recipedemo.domain.Difficulty;
 import guru.springframework.recipedemo.domain.Recipe;
+import guru.springframework.recipedemo.exceptions.NotFoundException;
 import guru.springframework.recipedemo.services.RecipeService;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.Set;
 
 /**
@@ -15,6 +20,8 @@ import java.util.Set;
  */
 @Controller
 public class RecipeController {
+
+    private static final String RECIPE_RECIPEFORM_URL = "recipe/recipeform";
 
     private final RecipeService recipeService;
 
@@ -42,7 +49,12 @@ public class RecipeController {
     }
 
     @PostMapping("recipe")
-    public String saveOrUpdate(@ModelAttribute RecipeCommand recipeCommand){
+    public String saveOrUpdate(@Valid @ModelAttribute("recipe") RecipeCommand recipeCommand,
+                               BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return RECIPE_RECIPEFORM_URL;
+        }
+
         RecipeCommand recipeCommand1=recipeService.saveRecipeCommand(recipeCommand);
         return "redirect:/recipe/"+recipeCommand1.getId()+"/show";
     }
@@ -52,5 +64,7 @@ public class RecipeController {
         recipeService.deleteRecipeById(id);
         return "redirect:/";
     }
+
+
 
 }
